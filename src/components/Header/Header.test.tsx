@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 
-import { App } from './App'
+import { Header } from './Header'
 
-const buildComponent = () => render(<App />)
+const buildComponent = () => render(<Header />)
 
-describe('App component', () => {
+describe('Header component', () => {
   it('should render correctly', () => {
     buildComponent()
 
