@@ -1,5 +1,8 @@
 # App Livraria
 
+![CI/CD](https://github.com/thaiscristinabertoldo/app-sass/workflows/CI/CD/badge.svg)
+[![Codecov](https://img.shields.io/codecov/c/github/thaiscristinabertoldo/app-sass)](https://codecov.io/gh/thaiscristinabertoldo/app-sass)
+
 Projeto React desenvolvido utilizando Sass e TypeScript
 
 ## Primeiros passos
