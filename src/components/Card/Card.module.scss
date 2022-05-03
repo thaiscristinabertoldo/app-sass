@@ -1,0 +1,55 @@
+@import '../../theme/theme.scss';
+
+.c-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 25%;
+  width: 25%;
+  min-width: calc(180px - 1rem);
+  background-color: theme-color(white);
+  padding: 1rem;
+  margin: 2rem 0.5rem 0.5rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+  list-style: none;
+
+  &:hover {
+    box-shadow: theme-color(boxShadow) 0px 7px 29px 0px;
+  }
+}
+
+.c-card__image {
+  height: 250px;
+  max-width: 180px;
+}
+
+.c-card__title {
+  text-align: center;
+  color: theme-color(secondary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.c-card__price {
+  font-weight: 600;
+}
+
+.c-card__button {
+  background-color: theme-color(secondary);
+  padding: 0.8rem;
+  color: theme-color(white);
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.5em;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    filter: brightness(75%);
+  }
+}
