@@ -1,0 +1,17 @@
+@import '../../theme/theme.scss';
+
+.c-nav {
+  display: flex;
+  align-items: center;
+  background-color: theme-color(primary);
+  padding: 0.5rem;
+}
+
+.c-navbar__img {
+  height: 50px;
+}
+
+.c-navbar__title {
+  margin-left: 1rem;
+  color: theme-color(secondary);
+}
