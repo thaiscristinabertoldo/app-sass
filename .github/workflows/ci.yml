@@ -16,29 +16,14 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        
-    - name: Install dependencies
-      run: npm install
-      
-    - name: Run the lint
-      run: npm run lint
-      
-    - name: Run the tests and generate coverage report
-      run: npm run coverage
-      
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      
-    - name: Build
-      run: npm run build
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
